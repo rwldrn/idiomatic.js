@@ -29,6 +29,7 @@
 * Stephan Lindauer [@stephanlindauer](http://twitter.com/stephanlindauer), [github](https://github.com/stephanlindauer)
 * Thomas P [@dragon5689](https://twitter.com/dragon5689) [github](https://github.com/dragon5689)
 * Yotam Ofek [@yotamofek](https://twitter.com/yotamofek) [github](https://github.com/yotamofek)
+* Mims H Wright [@mimshwright](https://twitter.com/mimshwright) [github](https://github.com/mimshwright)
 
 
 
@@ -1263,11 +1264,68 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 9. <a name="comments">Comments</a>
 
-    #### Single line above the code that is subject
-    #### Multiline is good
-    #### End of line comments are prohibited!
-    #### JSDoc style is good, but requires a significant time investment
+    A. Single line above the code that is subject
 
+    B. Multiline is good
+
+    C. End of line comments are prohibited!
+
+    D. JSDoc style is good, but requires a significant time investment
+
+    E. Elaborately formatted comments
+
+    Fancy comments should be avoided. They are time-consuming, difficult to maintain and do not add much benefit. Example:
+
+    ```javascript
+    // 9.E.1.1
+    // Very Bad:
+
+      ////////////////////////
+     /// «« MY COMMENT »» ///
+    ////////////////////////
+
+    // 9.E.1.2
+    // Bad:
+
+    /*************
+    * My Comment *
+    *************/
+
+    /////
+    // My Comment
+    ////
+
+
+    // 9.E.1.3
+    // Good:
+
+    // My Comment
+
+    ```
+
+    One possible exception: comments that divide sections may extend to the current indent to create a visual break.
+
+    ```javascript
+
+    // 9.E.2.1
+
+    // Section dividers can extend to the first column:
+
+    var module = {
+      obj : {
+        foo : function () {
+          ...
+        },
+
+    //// SECTION DIVIDER
+
+        bar : function () {
+                ...
+        }
+      }
+    }
+
+    ```
 
 10. <a name="language">One Language Code</a>
 
